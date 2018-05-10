@@ -1,0 +1,41 @@
+datasource:
+  primary:
+#    url: jdbc:oracle:thin:@//10.65.164.55:1521/cyora
+    url: jdbc:oracle:thin:@//192.168.91.128/cyora
+    username: ln_mes
+    password: ln_mes
+    driverClassName: oracle.jdbc.driver.OracleDriver
+jwt:
+  header: Authorization
+  secret: superdiao
+  expiration: 604800
+  route:
+    authentication:
+      path: auth
+      refresh: refresh
+base-api-url: /npl/api/v1
+resources-path: /res/upload/
+upload-path: /Users/vaan/upload/
+web-base-url: http://www.yifanshen.com:4202
+spring:
+  mvc:
+    throw-exception-if-no-handler-found: true
+  profiles:
+    active: production
+---
+spring:
+    profiles: production
+upload-path: E:/upload/
+web-base-url: http://www.tjxfh.net
+
+---
+spring:
+    profiles: development
+datasource:
+#  primary:
+#    url: jdbc:oracle:thin:@//172.16.120.133:1521/cyora
+#upload-path: /Users/vaan/upload/
+  url: jdbc:oracle:thin:@//192.168.91.128/cyora
+
+
+

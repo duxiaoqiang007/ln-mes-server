@@ -1,0 +1,24 @@
+datasource:
+  primary:
+    url: jdbc:oracle:thin:@//192.168.91.128/cyora
+    username: ln_mes
+    password: ln_mes
+    driverClassName: oracle.jdbc.driver.OracleDriver
+
+---
+spring:
+    profiles: development
+datasource:
+#  primary:
+#    url: jdbc:oracle:thin:@//172.16.120.133:1521/cyora
+
+
+---
+spring:
+    profiles: production
+#datasource:
+#  primary:
+#    url: jdbc:oracle:thin:@//192.168.1.248:1521/nplora
+
+
+
